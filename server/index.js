@@ -17,12 +17,12 @@ zomato.get('/', (req, res) => {
 
 
 zomato.listen(4000, () => {
-    //  ConnectDB().then(() => {
-    //      console.log("server is running");
-    //  }).catch((error) => {
-    //      console.log("server is runnig,  but database connection is failed");
-    //      console.log(error);
-    //  })
+    ConnectDB().then(() => {
+        console.log("server is running database is connected");
+    }).catch((error) => {
+        console.log("server is runnig,  but database connection is failed");
+        console.log(error);
+    })
 
-    console.log("server is running");
+    // console.log("server is running");
 });
